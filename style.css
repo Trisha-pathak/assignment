@@ -1705,11 +1705,17 @@ hr {
 /* *************************************************************Section 9******************************************************** */
 
 
-.resources {
+/* .resources {
     position: relative;
     width: 1600px;
     height: 500px;
     padding-bottom: 30px;
+} */
+
+.resources {
+    position: relative;
+    width: 100%;
+    max-width: 1600px;
 }
 
 .resources::before {
@@ -1776,6 +1782,29 @@ hr {
     border: none;
     color: #2B3990;
 }
+
+@media (max-width: 540px) {
+    .resource_item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .download_link {
+        margin-top: 10px;
+        order: 2;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .resources_header h2 {
+        font-size: 28px;
+        margin-bottom: 10px;
+        text-align: center;
+        font-weight: 700;
+        color: #0D0D0D;
+    }
+}
+
 
 
 /* **********************************************************Section 10******************************************************** */
