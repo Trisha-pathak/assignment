@@ -692,11 +692,11 @@ hr {
 
 /* ***********************************************Section 4************************************************* */
 
-
 .faq_section {
     position: relative;
-    width: 1600px;
-    padding: 100px;
+    width: 100%;
+    padding: 100px; 
+    box-sizing: border-box; 
 }
 
 .faq_section::before {
@@ -730,7 +730,8 @@ hr {
     transition: 0.3s;
     gap: 16px;
     width: 1280px;
-    margin: 10px;
+    margin: 10px auto; 
+    box-sizing: border-box;
 }
 
 .faq-question {
@@ -758,6 +759,8 @@ hr {
     border: 1px solid #CFD1D4;
     display: flex;
     justify-content: space-between;
+    margin: 10px auto; 
+    box-sizing: border-box;
 }
 
 .cta-text h3 {
@@ -777,32 +780,98 @@ hr {
 }
 
 .faq_form {
-    padding: 16px 2px 16px 2px;
+    padding: 16px 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .faq_form input {
     border-radius: 10px;
     border: 1px solid #ddd;
     height: 40px;
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
     color: #959BA4;
-    margin: 2px;
+    margin: 2px 0;
     font-size: 14px;
     font-weight: 400;
     text-align: left;
+    box-sizing: border-box;
 }
 
 .faq_form button {
-    padding: 10px 16px 10px 16px;
-    margin: 2px;
+    padding: 10px 16px;
+    margin: 2px 0;
     border-radius: 10px;
     background: #2B3990;
     white-space: nowrap;
     height: 40px;
-    width: 365px;
+    width: 100%; 
+    max-width: 365px; 
     font-size: 14px;
     font-weight: 500;
     color: #FFFFFF;
+}
+
+@media (max-width: 1200px) {
+    .faq_section {
+        padding: 80px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .faq_section {
+        padding: 80px 60px;
+    }
+}
+
+@media (max-width: 800px) {
+    .faq_section {
+        padding: 80px 48px;
+    }
+    .faq_item, .cta-box {
+        width: 100%;
+    }
+
+    .cta-box {
+        flex-direction: column;
+        align-items: flex-start; 
+        width: 100%;
+    }
+
+    .cta-text {
+        width: 100%;
+        margin-bottom: 20px; 
+    }
+
+    .faq_form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .faq_form input {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 10px;
+    }
+
+    .faq_form button {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 360px) {
+    .faq_section {
+        padding: 48px 16px;
+    }
+    .faq_form input, .faq_form button {
+        width: 100%;
+        max-width: none;
+    }
 }
 
 /* ********************************************Section 5****************************************** */
