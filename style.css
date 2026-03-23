@@ -887,6 +887,9 @@ hr {
     padding: 0;
     position: relative;
     box-sizing: border-box;
+    padding-bottom: 100px;
+    padding-top: 100px;
+
 }
 
 .application::before {
@@ -937,6 +940,10 @@ hr {
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
+    scroll-snap-type: x mandatory;
+    margin-top: 40px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .app-card {
@@ -990,25 +997,37 @@ hr {
 
 @media (max-width: 1200px) {
     .application {
-        padding: 80px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
 @media (max-width: 1080px) {
     .application {
-        padding: 80px 60px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
 @media (max-width: 800px) {
     .application {
-        padding: 80px 48px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
 @media (max-width: 360px) {
     .application {
-        padding: 48px 16px;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -1224,14 +1243,14 @@ hr {
         font-size: 13px;
     }
 
-    .nav-btn .prev{
+    .nav-btn .prev {
         margin-left: 50px;
 
     }
 
-    .nav-btn .next{
+    .nav-btn .next {
         z-index: 1;
-         margin-right: 50px;
+        margin-right: 50px;
 
     }
 
@@ -1256,13 +1275,13 @@ hr {
 }
 
 /* ***********************************************Section 7************************************************ */
-
 .test {
+    width: 100%;
+    padding: 0;
     position: relative;
-    width: 1600px;
-    height: 680px;
-    text-align: center;
+    box-sizing: border-box;
     padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .test::before {
@@ -1278,6 +1297,7 @@ hr {
     font-size: 44px;
     font-weight: 700px;
     color: #0D0D0D;
+    text-align: center;
 }
 
 .test_header p {
@@ -1289,11 +1309,13 @@ hr {
 
 .test_cards {
     display: flex;
+    margin: 0;
+    padding: 0;
     gap: 20px;
     overflow-x: auto;
+    scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     margin-top: 40px;
-    padding-right: 20px;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -1312,15 +1334,17 @@ hr {
 }
 
 .test_card {
-    width: 350px;
-    height: 302px;
+    max-width: 350px;
+    max-height: 302px;
     background: #F7F8F9;
+    overflow: hidden;
     padding: 32px;
     border-radius: 24px;
     border: 1.5px solid #E1E3E8;
     flex-shrink: 0;
-
     scroll-snap-align: start;
+    position: relative;
+    margin: 0;
 }
 
 .quote {
@@ -1360,15 +1384,44 @@ hr {
     color: #535A61;
 }
 
-@media (max-width: 768px) {
-    .test_cards {
-        flex-direction: column;
+@media (max-width: 1200px) {
+    .test {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
+    .test {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .test {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .test_card {
-        min-width: 90%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 360px) {
+    .test {
+        padding-top: 48px;
+        padding-bottom: 48px;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
