@@ -564,6 +564,12 @@ hr {
     }
 }
 
+@media(max-width: 760px) {
+    .specs-header h2 {
+        font-size: 28px;
+    }
+}
+
 /* ******************************************Section 3******************************************* */
 
 .card_section {
@@ -688,6 +694,12 @@ hr {
 
     .section-header p {
         font-size: 16px;
+    }
+}
+
+@media(max-width: 760px) {
+    .section-header h2 {
+        font-size: 28px;
     }
 }
 
@@ -1046,6 +1058,12 @@ hr {
     }
 }
 
+@media(max-width: 760px) {
+    .apps-header h2 {
+        font-size: 28px;
+    }
+}
+
 /* *************************************************Section 6************************************************ */
 
 /* * {
@@ -1082,7 +1100,7 @@ hr {
 }
 
 .process-header h2 {
-    font-size: 2.5em;
+    font-size: 44px;
     margin-bottom: 15px;
     line-height: 1.2;
 }
@@ -1260,6 +1278,12 @@ hr {
 
 }
 
+@media(max-width: 760px) {
+    .process-header h2 {
+        font-size: 28px;
+    }
+}
+
 @media (max-width: 768px) {
     .active-tab-name {
         display: flex;
@@ -1414,6 +1438,13 @@ hr {
     .test_card {
         max-width: 300px;
     }
+
+}
+
+@media(max-width: 760px) {
+    .test_header h2 {
+        font-size: 28px;
+    }
 }
 
 @media (max-width: 360px) {
@@ -1429,9 +1460,12 @@ hr {
 
 .portfolio {
     position: relative;
-    width: 1600px;
-    height: 970px;
-    gap: 56px;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .portfolio::before {
@@ -1459,80 +1493,92 @@ hr {
 }
 
 .portfolio-cards {
-    width: 1280px;
     display: flex;
-    gap: 24px;
-    margin-top: 40px;
-    text-align: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
 }
 
-.portfolio-card {
-    flex: 1;
-    background: #fff;
-    padding: 20px;
-    border-radius: 16px;
-    text-align: left;
-    gap: 24px;
-    border: 1px solid #e5e5e5;
-    transition: 0.3s;
-    justify-content: space-between;
+.portfolio-card * {
+    box-sizing: border-box;
+    width: 100%;
+    word-wrap: break-word;
 }
 
 .portfolio-card:hover {
     transform: translateY(-5px);
 }
 
-.portfolio_text {
-    width: 349.33px;
-    height: 146px;
+
+.portfolio-card {
+    height: auto;
+    max-height: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: left;
+    gap: 24px;
+    border: 1px solid #CFD1D4;
+    border-radius: 16px;
+    background: #FFFFFF;
+    transition: 0.3s;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
 }
 
-.portfolio_text h6 {
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: #0D0D0D;
-    margin: 0 0 2px 0;
+.portfolio-card h6 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
-.portfolio_text p {
-    font-size: 16px;
-    font-weight: 400;
-    color: #4D545C;
-    margin: 0;
+.portfolio-card p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.portfolio-card .bottom-elements {
+    margin-top: auto;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .portfolio-card img {
-    width: 349.33px;
-    height: 174.67px;
-    object-fit: cover;
-    border-radius: 16px;
-    margin-bottom: 15px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    max-height: 200px;
 }
 
 .learn-btn {
-    width: 349.33px;
+    width: 100%;
+    max-width: 600px;
     height: 44px;
-    padding: 10px 24px 10px 24px;
+    padding: 10px 24px;
     border-radius: 12px;
     border: 1px solid #2B3990;
     background: #E1E3E8;
     color: #2B3990;
     cursor: pointer;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .portfolio-cta {
     margin-top: 40px;
     padding: 20px;
-    width: 1240px;
-    height: 107px;
+    width: 100%;
+    max-width: 1400px;
     background: #FFFFFF;
     border-radius: 10px;
     border: 1px solid #CFD1D4;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-align: left;
+    box-sizing: border-box;
 }
 
 .portfolio-cta h6 {
@@ -1540,6 +1586,9 @@ hr {
     font-weight: 600;
     color: #0D0D0D;
     margin: 0 0 2px 0;
+    flex-shrink: 1;
+    max-width: 70%;
+    word-wrap: break-word;
 }
 
 .portfolio-cta h6 span {
@@ -1550,27 +1599,105 @@ hr {
     font-size: 16px;
     color: #262A2E;
     font-weight: 400;
+    flex-shrink: 1;
+    max-width: 60%;
+    word-wrap: break-word;
 }
 
 .cta-btn {
     background: #2B3990;
     color: #FFFFFF;
-    padding: 12px 16px 12px 16px;
+    padding: 12px 16px;
     border-radius: 10px;
     border: none;
-    gap: 8px;
     cursor: pointer;
+    flex-shrink: 0;
+    margin-left: 20px;
+    white-space: nowrap;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+    .portfolio {
+        padding: 80px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .learn-btn {
+        max-width: 349px;
+    }
+}
+
+@media (min-width: 801px) {
+    .portfolio-cards {
+        flex-direction: row;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .portfolio-card {
+        width: calc(33.33% - 16px);
+        max-width: none;
+    }
+}
+
+@media (max-width: 1080px) {
+    .portfolio {
+        padding: 80px 60px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .portfolio {
+        padding: 80px 48px;
+    }
+
     .portfolio-cards {
         flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .portfolio-card {
+        width: 90%;
+        max-width: 100%;
+    }
+
+    .portfolio_text,
+    .portfolio-card img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 360px) {
+    .portfolio {
+        padding: 48px 16px;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .portfolio-header h2 {
+        font-size: 28px;
+        margin-bottom: 10px;
+        text-align: center;
+        font-weight: 700;
+        color: #0D0D0D;
     }
 
     .portfolio-cta {
         flex-direction: column;
-        gap: 15px;
+        height: auto;
+        width: 100%;
+    }
+
+    .portfolio-cta .cta-btn {
+        margin-top: auto;
+        align-self: stretch;
         text-align: center;
+        margin-top: 20px;
     }
 }
 
