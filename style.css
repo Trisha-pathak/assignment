@@ -6,6 +6,8 @@ html,
 body {
     overflow-x: hidden;
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
 
 /* .container {
@@ -877,10 +879,10 @@ hr {
 /* ********************************************Section 5****************************************** */
 
 .application {
+    width: 100%;
+    padding: 0;
     position: relative;
-    width: 1600px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    box-sizing: border-box;
 }
 
 .application::before {
@@ -895,12 +897,12 @@ hr {
 .apps-header {
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
-    width: 1240px;
+    margin: 0 auto 30px auto;
+    max-width: 1240px;
+    width: 100%;
     height: 184px;
     gap: 20px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 0;
 }
 
 .apps-header h2 {
@@ -908,6 +910,7 @@ hr {
     font-weight: 700;
     letter-spacing: 0%;
     color: #0D0D0D;
+    margin: 0; 
 }
 
 .apps-header p {
@@ -915,6 +918,7 @@ hr {
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 0%;
+    margin: 0;
 }
 
 .apps-arrows {
@@ -927,28 +931,32 @@ hr {
     gap: 20px;
     overflow-x: auto;
     scroll-behavior: smooth;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.apps-cards::-webkit-scrollbar {
-    display: none;
+    margin: 0; 
+    padding: 0;
 }
 
 .app-card {
-    min-width: 420px;
-    height: 420px;
+    max-width: 420px;
+    max-height: 420px;
     border-radius: 20px;
     overflow: hidden;
     position: relative;
     flex-shrink: 0;
     backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 0; 
 }
 
 .app-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.apps-cards::-webkit-scrollbar {
+    display: none;
 }
 
 .overlay {
@@ -958,8 +966,8 @@ hr {
     flex-direction: column;
     justify-content: flex-end;
     padding: 20px;
-    background: rgba(255, 255, 255, 1);
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.579217) 40.23%, rgba(0, 0, 0, 0.8) 75.96%);
+    box-sizing: border-box;
 }
 
 .overlay h6 {
@@ -974,6 +982,45 @@ hr {
     letter-spacing: -0.6%;
     font-weight: 400;
     color: #FFFFFF;
+}
+
+@media (max-width: 1200px) {
+    .application {
+        padding: 80px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .application {
+        padding: 80px 60px;
+    }
+}
+
+@media (max-width: 800px) {
+    .application {
+        padding: 80px 48px;
+    }
+}
+
+@media (max-width: 360px) {
+    .application {
+        padding: 48px 16px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .apps-header {
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-card {
+        min-width: 300px;
+        height: auto;
+    }
 }
 
 /* *************************************************Section 6************************************************ */
