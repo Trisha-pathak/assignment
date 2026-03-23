@@ -566,9 +566,10 @@ hr {
 
 .card_section {
     position: relative;
-    width: 1440px;
-    height: 900px;
-    padding-bottom: 100px;
+    width: 100%; 
+    padding: 50px 20px 100px;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .card_section::before {
@@ -582,6 +583,7 @@ hr {
 
 .section-header {
     text-align: left;
+    padding: 0 20px;
 }
 
 .section-header h2 {
@@ -589,6 +591,7 @@ hr {
     font-weight: 700;
     line-height: 120%;
     letter-spacing: 0px;
+    margin-bottom: 16px;
 }
 
 .section-header p {
@@ -598,22 +601,26 @@ hr {
     font-weight: 400;
     line-height: 160%;
     letter-spacing: -0.6%;
+    margin-bottom: 40px;
+    padding: 0 20px;
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); 
     gap: 25px;
     margin-bottom: 50px;
+    padding: 0 20px;
 }
 
 .feature-card {
     background: #FFFFFF;
-    width: 387.33px;
     padding: 20px;
     border-radius: 16px;
     border: 1px solid #CFD1dD;
     transition: 0.25s;
+    width: 100%; 
+    box-sizing: border-box; 
 }
 
 .feature-card:hover {
@@ -626,13 +633,14 @@ hr {
     width: 26px;
     height: 25px;
     stroke: #2B3990;
+    margin-bottom: 16px;
 }
 
 .feature-card h3 {
     font-size: 20px;
     font-weight: 600;
     line-height: 120%;
-    letter-spacing: 0%;
+    margin-bottom: 12px;
 }
 
 .feature-card p {
@@ -645,6 +653,7 @@ hr {
 
 .cta_feature {
     text-align: center;
+    padding: 0 20px;
 }
 
 .cta_feature button {
@@ -653,11 +662,33 @@ hr {
     background: #2B3990;
     color: #FFFFFF;
     border-radius: 12px;
-    padding: 16px 24px 16px 24px;
+    padding: 16px 24px;
     letter-spacing: -0.6%;
     font-size: 16px;
     cursor: pointer;
+    border: none; 
 }
+
+@media (max-width: 1024px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+
+    .section-header h2 {
+        font-size: 32px;
+    }
+
+    .section-header p {
+        font-size: 16px;
+    }
+}
+
 
 /* ***********************************************Section 4************************************************* */
 
