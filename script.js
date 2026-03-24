@@ -133,7 +133,7 @@ function showStep(index) {
     tab.classList.toggle('active', i === index);
   });
 
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 790) {
     const tabName = tabs[index].getAttribute('data-name');
     activeTabName.textContent = tabName;
   }
@@ -172,7 +172,7 @@ tabs.forEach((tab, i) => {
 });
 
 function updateActiveTabNameVisibility() {
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 790) {
     document.querySelector('.active-tab-name').style.display = 'block';
     const tabName = tabs[currentStep].getAttribute('data-name');
     activeTabName.textContent = tabName;

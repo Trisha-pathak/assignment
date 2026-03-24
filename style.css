@@ -1363,14 +1363,9 @@ h1 {
 
 /* *************************************************Section 6************************************************ */
 
-/* * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-} */
-
 .process {
     position: relative;
+    padding: 100px;
 }
 
 .process::before {
@@ -1383,8 +1378,8 @@ h1 {
 }
 
 .container_a {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1300px;
+    width: 100%;
     padding: 40px 40px;
     background: #FFFFFF;
     border: 1.2px solid #CFD1D4;
@@ -1442,7 +1437,8 @@ h1 {
 
 .process-text {
     flex: 1;
-    min-width: 300px;
+    max-width: 600px;
+    width: 100%;
 }
 
 .process_title {
@@ -1481,7 +1477,8 @@ h1 {
 
 .process-image {
     flex: 1;
-    min-width: 300px;
+    width: 100%;
+    max-width: 600px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -1530,13 +1527,41 @@ h1 {
     .process-content {
         flex-direction: column;
     }
+
+    .process {
+        padding-left: 48px;
+        padding-right: 48px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+@media (max-width: 560px) {
+    .process {
+        padding-left: 4px;
+        padding-right: 4px;
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .container_a {
+        padding: 5px 5px;
+    }
+
 }
 
 .navigation-buttons {
     display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 790px) {
+    .process {
+        padding-left: 48px;
+        padding-right: 48px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
     .tabs {
         display: none;
     }
@@ -1544,7 +1569,7 @@ h1 {
     .navigation-buttons {
         display: flex;
         justify-content: space-between;
-        margin: 20px;
+        margin: 10px;
         position: relative;
     }
 
@@ -1573,15 +1598,6 @@ h1 {
         background-color: #2B3990;
     }
 
-}
-
-@media(max-width: 760px) {
-    .process-header h2 {
-        font-size: 28px;
-    }
-}
-
-@media (max-width: 768px) {
     .active-tab-name {
         display: flex;
         font-size: 12px;
@@ -1592,6 +1608,13 @@ h1 {
         width: 150px;
         text-align: center;
 
+    }
+
+}
+
+@media(max-width: 760px) {
+    .process-header h2 {
+        font-size: 28px;
     }
 }
 
@@ -1975,7 +1998,7 @@ h1 {
 
 @media (max-width: 360px) {
     .portfolio {
-         padding-left: 16px;
+        padding-left: 16px;
         padding-right: 16px;
         padding-top: 48px;
         padding-bottom: 48px;
