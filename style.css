@@ -1080,6 +1080,7 @@ h1 {
     letter-spacing: 0px;
     color: #0D0D0D;
     padding-left: 10px;
+    padding-top: 25px;
 }
 
 .cta-text p {
@@ -1088,13 +1089,16 @@ h1 {
     font-weight: 400;
     letter-spacing: -0.6px;
     padding-left: 10px;
+    padding-top: 15px;
 }
 
 .faq_form {
-    padding: 16px 2px;
+    padding: 12px 2px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
+    max-width: 400px;
 }
 
 .faq_form input {
@@ -1102,13 +1106,14 @@ h1 {
     border: 1px solid #ddd;
     height: 40px;
     width: 100%;
-    max-width: 360px;
+    max-width: 365px;
     color: #959BA4;
     margin: 2px 0;
     font-size: 14px;
     font-weight: 400;
     text-align: left;
     box-sizing: border-box;
+    padding: 10px;
 }
 
 .faq_form button {
