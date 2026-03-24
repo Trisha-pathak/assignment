@@ -704,6 +704,99 @@ h1 {
     }
 }
 
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background: #fff;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #CFD1dD;
+    border-radius: 8px;
+}
+
+.phone-group {
+    display: flex;
+    border: 1px solid #CFD1dD;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.country-code {
+    padding: 0 12px;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #CFD1dD;
+}
+
+.phone-group input {
+    border: none;
+    padding-top: 20px;
+}
+
+.modal-footer {
+    padding: 15px 20px;
+    background: #fcfcfc;
+    text-align: right;
+}
+
+.submit-form-btn,
+.download-btn-submit {
+    background: #2B3990;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.close-btn {
+    background: #E1E3E8;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 2px;
+    border: 1px solid #CFD1dD;
+}
+
 /* ******************************************Section 3******************************************* */
 
 .card_section {

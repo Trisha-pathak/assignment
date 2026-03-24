@@ -177,3 +177,52 @@ updateActiveTabNameVisibility();
 window.addEventListener('resize', () => {
   updateActiveTabNameVisibility();
 });
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function openModal(modalId) {
+    document.getElementById(modalId).classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+
+    const form = modal.querySelector('form');
+    if (form) {
+        form.reset();
+    }
+
+    const allInputs = modal.querySelectorAll('input');
+    allInputs.forEach(input => {
+        input.value = '';
+    });
+
+    const submitBtn = modal.querySelector('.download-btn-submit');
+    if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.style.background = '#DDE2EE';
+        submitBtn.style.cursor = 'not-allowed';
+    }
+}
+
+document.querySelector('.download_tech').addEventListener('click', () => {
+    openModal('downloadModal');
+});
+
+document.querySelector('.cta_feature button').addEventListener('click', () => {
+    openModal('quoteModal');
+});
+
+window.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal-overlay')) {
+        const activeModal = document.querySelector('.modal-overlay.active');
+        if (activeModal) {
+            closeModal(activeModal.id);
+        }
+    }
+});

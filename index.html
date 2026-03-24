@@ -207,6 +207,28 @@
         </div>
     </section>
 
+    <div id="downloadModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Let us email the entire catalogue to you</h3>
+                <button class="close-btn" onclick="closeModal('downloadModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group">
+                    <label>Your Email *</label>
+                    <input type="email" id="dl-email" placeholder="example@gmail.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Your Contact (Optional)</label>
+                    <input type="text" placeholder="+91-0000000000">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="download-btn-submit">Download Brochure</button>
+            </div>
+        </div>
+    </div>
+
     <hr>
 
     <section class="card_section">
@@ -308,6 +330,27 @@
         </div>
 
     </section>
+
+    <div id="quoteModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Request a call back</h3>
+                <button class="close-btn" onclick="closeModal('quoteModal')">&times;</button>
+            </div>
+            <form class="modal-body">
+                <div class="input-group"><input type="text" placeholder="Full Name" required></div>
+                <div class="input-group"><input type="text" placeholder="Company Name"></div>
+                <div class="input-group"><input type="email" placeholder="Email Address" required></div>
+                <div class="phone-group">
+                    <div class="country-code"><span>+91</span></div>
+                    <input type="tel" required>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="submit-form-btn">Submit Form</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <hr>
 
