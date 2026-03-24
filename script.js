@@ -34,9 +34,7 @@ thumbs.forEach((thumb, index) => {
 });
 
 
-
-
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //Added navigation to the contact us form on Contact button click
 const contactBtn = document.getElementById("contactBtn");
@@ -47,6 +45,11 @@ contactBtn.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 // For Section-5 Card slider Button
@@ -105,12 +108,10 @@ const steps = [
   {
     title: "Step 7",
   }
-  // Add more steps as needed
 ];
 
 let currentStep = 0;
 
-// Select elements
 const processTexts = document.querySelectorAll('.process-text');
 const processImages = document.querySelectorAll('.slide');
 const prevBtn = document.querySelector('.prev');
@@ -120,32 +121,26 @@ const activeTabName = document.querySelector('.active-tab-name');
 const sliderImages = document.querySelectorAll('.slide');
 
 function showStep(index) {
-  // Show/hide process texts
   processTexts.forEach((el, i) => {
     el.style.display = i === index ? 'block' : 'none';
   });
 
-  // Show/hide images
   sliderImages.forEach((img, i) => {
     img.style.display = i === index ? 'block' : 'none';
   });
 
-  // Update tab active class
   tabs.forEach((tab, i) => {
     tab.classList.toggle('active', i === index);
   });
 
-  // Update active tab name at top with the tab's data-name
   if (window.innerWidth <= 768) {
     const tabName = tabs[index].getAttribute('data-name');
     activeTabName.textContent = tabName;
   }
 }
 
-// Initialize first step
 showStep(currentStep);
 
-// Event listeners for Prev/Next buttons
 nextBtn.addEventListener('click', () => {
   if (currentStep < steps.length - 1) {
     currentStep++;
@@ -169,7 +164,6 @@ prevBtn.addEventListener('click', () => {
 });
 
 
-// Event listeners for tabs
 tabs.forEach((tab, i) => {
   tab.addEventListener('click', () => {
     currentStep = i;
@@ -177,11 +171,9 @@ tabs.forEach((tab, i) => {
   });
 });
 
-// Show/hide active tab name based on window size
 function updateActiveTabNameVisibility() {
   if (window.innerWidth <= 768) {
     document.querySelector('.active-tab-name').style.display = 'block';
-    // Set initial value
     const tabName = tabs[currentStep].getAttribute('data-name');
     activeTabName.textContent = tabName;
   } else {
@@ -189,10 +181,8 @@ function updateActiveTabNameVisibility() {
   }
 }
 
-// Initial check
 updateActiveTabNameVisibility();
 
-// Update on window resize
 window.addEventListener('resize', () => {
   updateActiveTabNameVisibility();
 });
