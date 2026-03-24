@@ -1311,6 +1311,11 @@ h1 {
         padding-left: 0;
         padding-right: 0;
     }
+
+    .apps-header {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
 }
 
 @media (max-width: 1080px) {
@@ -1319,6 +1324,11 @@ h1 {
         padding-bottom: 80px;
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .apps-header {
+        padding-left: 60px;
+        padding-right: 60px;
     }
 }
 
@@ -1329,6 +1339,11 @@ h1 {
         padding-left: 0;
         padding-right: 0;
     }
+
+    .apps-header {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
 }
 
 @media (max-width: 360px) {
@@ -1338,6 +1353,10 @@ h1 {
         padding-left: 0;
         padding-right: 0;
     }
+    .apps-header {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1346,9 +1365,7 @@ h1 {
         height: auto;
         align-items: flex-start;
     }
-}
 
-@media (max-width: 768px) {
     .app-card {
         min-width: 300px;
         height: auto;
