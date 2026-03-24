@@ -135,7 +135,6 @@ hr {
 .top_section {
     width: 100%;
     box-sizing: border-box;
-    margin: 0 auto;
 }
 
 .top_section_container {
@@ -145,7 +144,6 @@ hr {
     align-items: flex-start;
     gap: 40px;
     max-width: 1400px;
-    margin: 0 auto;
     padding: 100px;
 }
 
@@ -204,15 +202,41 @@ hr {
     display: flex;
     gap: 12px;
     margin-top: 15px;
-    overflow-x: auto;
+    overflow-y: hidden;
 }
 
-.thumb {
+/* .thumb {
     min-width: 60px;
     height: 60px;
     background: #fff;
     border: 1px solid #CFD1D4;
     border-radius: 8px;
+} */
+
+
+.thumb {
+    width: 60px;
+    max-height: 60px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    background-size: cover;
+}
+
+.thumb.active {
+    border-color: #ff6600;
+    opacity: 1;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.thumb img {
+    width: 100%;
+    max-width: 60px;
+    height: auto;
+    align-items: center;
+    overflow-y: hidden;
 }
 
 h1 {
@@ -258,16 +282,17 @@ h1 {
 
 .logos {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 40px;
-    padding: 40px 0;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .logos img {
     width: 100px;
     height: auto;
-    opacity: 0.6;
+    /* opacity: 0.6; */
 }
 
 .product p {
@@ -297,8 +322,8 @@ h1 {
     top: 50%;
     transform: translateY(-50%);
 
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 
     border-radius: 50%;
     border: 1px solid #ddd;
@@ -450,6 +475,30 @@ h1 {
         order: 2;
         width: 100%;
         max-width: 540px;
+    }
+
+    .logos {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 40px;
+        padding-left: 100px;
+        padding-right: 100px;
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .logos img {
+        width: 100px;
+        height: auto;
+        /* opacity: 0.6; */
     }
 }
 

@@ -1,35 +1,52 @@
+
+// For section 1 image Slider
+const mainImg = document.querySelector('.main_image img');
+const thumbs = document.querySelectorAll('.thumb');
+const prevBtnImg = document.querySelector('.arrow.left');
+const nextBtnImg = document.querySelector('.arrow.right');
+
+let currentIndex = 0;
+
+function updateGallery(index) {
+  thumbs.forEach(thumb => thumb.classList.remove('active'));
+  thumbs[index].classList.add('active');
+
+  const newSrc = thumbs[index].getAttribute('data-src') || `images/product-${index + 1}.jpg`;
+  mainImg.src = newSrc;
+
+  currentIndex = index;
+}
+
+nextBtnImg.addEventListener('click', () => {
+  let nextIndex = (currentIndex + 1 === thumbs.length) ? 0 : currentIndex + 1;
+  updateGallery(nextIndex);
+});
+
+prevBtnImg.addEventListener('click', () => {
+  let prevIndex = (currentIndex === 0) ? thumbs.length - 1 : currentIndex - 1;
+  updateGallery(prevIndex);
+});
+
+thumbs.forEach((thumb, index) => {
+  thumb.addEventListener('click', () => {
+    updateGallery(index);
+  });
+});
+
+
+
+
+
+
 //Added navigation to the contact us form on Contact button click
-// const contactBtn = document.getElementById("contactBtn");
-// const contactSection = document.getElementById("contact");
+const contactBtn = document.getElementById("contactBtn");
+const contactSection = document.getElementById("contact");
 
-// contactBtn.addEventListener("click", () => {
-//   contactSection.scrollIntoView({
-//     behavior: "smooth"
-//   });
-// });
-
-
-// For Section-6 Image slider Button
-// const slides = document.querySelectorAll(".slide");
-// const next_Btn = document.querySelector(".arrow_img.right");
-// const prev_Btn = document.querySelector(".arrow_img.left");
-
-// let current = 0;
-
-// function showSlide(index) {
-//   slides.forEach(slide => slide.classList.remove("active"));
-//   slides[index].classList.add("active");
-// }
-
-// next_Btn.addEventListener("click", () => {
-//   current = (current + 1) % slides.length;
-//   showSlide(current);
-// });
-
-// prev_Btn.addEventListener("click", () => {
-//   current = (current - 1 + slides.length) % slides.length;
-//   showSlide(current);
-// });
+contactBtn.addEventListener("click", () => {
+  contactSection.scrollIntoView({
+    behavior: "smooth"
+  });
+});
 
 
 // For Section-5 Card slider Button
@@ -60,6 +77,8 @@ tab.forEach(tab => {
 
 
 ////////////////////////////////////////////////////////////////////
+
+//For section 6 tab change
 
 const steps = [
   {
@@ -182,47 +201,47 @@ window.addEventListener('resize', () => {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function openModal(modalId) {
-    document.getElementById(modalId).classList.add('active');
-    document.body.style.overflow = 'hidden';
+  document.getElementById(modalId).classList.add('active');
+  document.body.style.overflow = 'hidden';
 }
 
 function closeModal(modalId) {
-    const modal = document.getElementById(modalId);
-    
-    modal.classList.remove('active');
-    document.body.style.overflow = 'auto';
+  const modal = document.getElementById(modalId);
 
-    const form = modal.querySelector('form');
-    if (form) {
-        form.reset();
-    }
+  modal.classList.remove('active');
+  document.body.style.overflow = 'auto';
 
-    const allInputs = modal.querySelectorAll('input');
-    allInputs.forEach(input => {
-        input.value = '';
-    });
+  const form = modal.querySelector('form');
+  if (form) {
+    form.reset();
+  }
 
-    const submitBtn = modal.querySelector('.download-btn-submit');
-    if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.style.background = '#DDE2EE';
-        submitBtn.style.cursor = 'not-allowed';
-    }
+  const allInputs = modal.querySelectorAll('input');
+  allInputs.forEach(input => {
+    input.value = '';
+  });
+
+  const submitBtn = modal.querySelector('.download-btn-submit');
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.style.background = '#DDE2EE';
+    submitBtn.style.cursor = 'not-allowed';
+  }
 }
 
 document.querySelector('.download_tech').addEventListener('click', () => {
-    openModal('downloadModal');
+  openModal('downloadModal');
 });
 
 document.querySelector('.cta_feature button').addEventListener('click', () => {
-    openModal('quoteModal');
+  openModal('quoteModal');
 });
 
 window.addEventListener('click', (e) => {
-    if (e.target.classList.contains('modal-overlay')) {
-        const activeModal = document.querySelector('.modal-overlay.active');
-        if (activeModal) {
-            closeModal(activeModal.id);
-        }
+  if (e.target.classList.contains('modal-overlay')) {
+    const activeModal = document.querySelector('.modal-overlay.active');
+    if (activeModal) {
+      closeModal(activeModal.id);
     }
+  }
 });
