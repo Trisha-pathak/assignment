@@ -37,14 +37,14 @@ thumbs.forEach((thumb, index) => {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //Added navigation to the contact us form on Contact button click
-const contactBtn = document.getElementById("contactBtn");
-const contactSection = document.getElementById("contact");
+// const contactBtn = document.getElementById("contactBtn");
+// const contactSection = document.getElementById("contact");
 
-contactBtn.addEventListener("click", () => {
-  contactSection.scrollIntoView({
-    behavior: "smooth"
-  });
-});
+// contactBtn.addEventListener("click", () => {
+//   contactSection.scrollIntoView({
+//     behavior: "smooth"
+//   });
+// });
 
 
 
