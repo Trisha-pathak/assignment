@@ -704,6 +704,7 @@ h1 {
     .specs-table-container {
         padding: 48px 16px;
     }
+
     .specs-header h2 {
         font-size: 28px;
         padding-left: 48px;
@@ -824,7 +825,7 @@ h1 {
 .card_section {
     position: relative;
     width: 100%;
-    padding: 50px 20px 100px;
+    padding: 100px;
     box-sizing: border-box;
     margin: 0 auto;
 }
@@ -857,7 +858,7 @@ h1 {
     font-weight: 400;
     letter-spacing: -0.6%;
     margin-bottom: 40px;
-    padding: 0 20px;
+    /* padding: 0 20px; */
 }
 
 .features-grid {
@@ -929,9 +930,21 @@ h1 {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+
+    .card_section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .section-header h2 {
+        font-size: 28px;
+    }
+
     .features-grid {
-        grid-template-columns: repeat(1, 1fr) !important;
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 
     .section-header h2 {
@@ -941,11 +954,12 @@ h1 {
     .section-header p {
         font-size: 16px;
     }
+
 }
 
-@media(max-width: 760px) {
-    .section-header h2 {
-        font-size: 28px;
+@media(max-width: 560px) {
+    .features-grid {
+        grid-template-columns: repeat(1, 1fr) !important;
     }
 }
 
