@@ -1761,8 +1761,7 @@ h1 {
     max-width: 1600px;
     margin: 0 auto;
     box-sizing: border-box;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 100px;
 }
 
 .portfolio::before {
@@ -1787,6 +1786,7 @@ h1 {
     text-align: center;
     font-weight: 400;
     color: #4D545C;
+    margin-bottom: 30px;
 }
 
 .portfolio-cards {
@@ -1799,6 +1799,7 @@ h1 {
 .portfolio-card * {
     box-sizing: border-box;
     width: 100%;
+    max-width: 600px;
     word-wrap: break-word;
 }
 
@@ -1847,9 +1848,9 @@ h1 {
     max-height: 200px;
 }
 
-.learn-btn {
+.bottom-elements .learn-btn {
     width: 100%;
-    max-width: 600px;
+    max-width: 650px;
     height: 44px;
     padding: 10px 24px;
     border-radius: 12px;
@@ -1884,7 +1885,6 @@ h1 {
     color: #0D0D0D;
     margin: 0 0 2px 0;
     flex-shrink: 1;
-    max-width: 70%;
     word-wrap: break-word;
 }
 
@@ -1897,7 +1897,6 @@ h1 {
     color: #262A2E;
     font-weight: 400;
     flex-shrink: 1;
-    max-width: 60%;
     word-wrap: break-word;
 }
 
@@ -1940,14 +1939,20 @@ h1 {
 
 @media (max-width: 1080px) {
     .portfolio {
-        padding: 80px 60px;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 }
 
 @media (max-width: 800px) {
 
     .portfolio {
-        padding: 80px 48px;
+        padding-left: 48px;
+        padding-right: 48px;
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 
     .portfolio-cards {
@@ -1970,7 +1975,10 @@ h1 {
 
 @media (max-width: 360px) {
     .portfolio {
-        padding: 48px 16px;
+         padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 48px;
+        padding-bottom: 48px;
     }
 }
 
@@ -2005,6 +2013,7 @@ h1 {
     position: relative;
     width: 100%;
     max-width: 1600px;
+    padding: 100px;
 }
 
 .resources::before {
@@ -2073,6 +2082,14 @@ h1 {
 }
 
 @media (max-width: 540px) {
+
+    .resources {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
     .resource_item {
         flex-direction: column;
         align-items: flex-start;
@@ -2084,7 +2101,14 @@ h1 {
     }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 800px) {
+
+    .resources {
+        padding-left: 48px;
+        padding-right: 48px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
 
     .resources_header h2 {
         font-size: 28px;
